@@ -29,16 +29,31 @@ public class Controller {
 	}
 
     @GetMapping("/base64/decode")
-    public String handleBase64Decode(@RequestParam String param) {
+    public String handleBase64Decode(@RequestParam String value) {
         
-        return basicConversitions.base64Decode(param);
+        return basicConversitions.base64Decode(value);
     }
     
     @GetMapping("/base64/encode")
-    public String handleBase64Encode(@RequestParam String param) {
+    public String handleBase64Encode(@RequestParam String value) {
        
-        return basicConversitions.base64Encode(param);
+        return basicConversitions.base64Encode(value);
     }
+
+    @GetMapping("/url/encode")
+    public String handleUrlEncode(@RequestParam String value,@RequestParam String method) {
+       
+        return basicConversitions.base64Encode(value);
+    }
+
+    @GetMapping("/url/decode")
+    public String handleUrlDecode(@RequestParam String value,@RequestParam String method) {
+       
+        return basicConversitions.base64Encode(value);
+    }
+
+
+
 
     
 }
