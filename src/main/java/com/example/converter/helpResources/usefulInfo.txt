@@ -1,0 +1,9 @@
+To test the web request
+http://localhost:8080/  -->welcome String
+http://localhost:8080/base64/decode?param=ZWxhbmdv   --> get request
+
+
+command line curl req:
+curl -v -XGET  "http://localhost:8080/
+curl -v -XGET  "http://localhost:8080/base64/decode?param=ZWxhbmdv"
+
