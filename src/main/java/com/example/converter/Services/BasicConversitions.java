@@ -21,6 +21,15 @@ public class BasicConversitions {
         return encodedString;
     }
 
+    /*public static byte[] base64Encode2(byte[] data) throws UnsupportedEncodingException {
+        return Base64.decodeBase64(data);
+    }
+     
+    public static byte[] base64Decode2(String data) throws UnsupportedEncodingException {
+        return Base64.getDecoder();
+    }*/
+    
+
     public String base64Decode(String param) {
 
         byte[] decodedBytes = Base64.getDecoder().decode(param);
@@ -28,7 +37,6 @@ public class BasicConversitions {
         System.out.println("Decoded String:"+decodedString);
         return decodedString;
     }
-
 
     public String URLDecoder(String value,String method) throws UnsupportedEncodingException {
 
@@ -84,5 +92,9 @@ public class BasicConversitions {
                 break;
         }
         return encodedString;
+    }
+
+    public String jwtDecode(){
+        return "hi";
     }
 }
