@@ -12,22 +12,28 @@ import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import org.apache.logging.log4j.Logger;
 
 
 @RestController
 //@RequestMapping("/api/v1")
 public class Controller {
 
+    ///Logger logger = LoggerFactory.getLogger(Controller.class);
+     private static final Logger logger = LogManager.getLogger(Controller.class);
+    
     @Autowired
     BasicConversitions basicConversitions; 
     
     @GetMapping("/")
 	public String index() {
-		return "welcome to elango's Spring Boot project!";
+        logger.debug("simply implemented log");
+		return "welcome to Spring Boot project!";
 	}
 
     @GetMapping("/base64/decode")
