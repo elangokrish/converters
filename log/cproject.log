@@ -1,0 +1,7 @@
+2024-04-28 18:46:33.396 []  INFO ConverterApplication: Starting ConverterApplication using Java 11.0.19 on hydlap1011 with PID 16530 (/mnt/c/Users/elangova/Downloads/converter/build/classes/java/main started by elangova in /mnt/c/Users/elangova/Downloads/converter)
+2024-04-28 18:46:33.404 [] DEBUG ConverterApplication: Running with Spring Boot v2.7.14, Spring v5.3.29
+2024-04-28 18:46:33.404 []  INFO ConverterApplication: No active profile set, falling back to 1 default profile: "default"
+2024-04-28 18:46:35.477 []  INFO ConverterApplication: Started ConverterApplication in 2.622 seconds (JVM running for 3.828)
+2024-04-28 18:48:16.559 []  INFO ConverterApplication: Starting ConverterApplication using Java 11.0.19 on hydlap1011 with PID 18953 (/mnt/c/Users/elangova/Downloads/converter/build/classes/java/main started by elangova in /mnt/c/Users/elangova/Downloads/converter)
+2024-04-28 18:48:16.574 []  INFO ConverterApplication: No active profile set, falling back to 1 default profile: "default"
+2024-04-28 18:48:18.613 []  INFO ConverterApplication: Started ConverterApplication in 2.55 seconds (JVM running for 3.624)
