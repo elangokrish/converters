@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN" monitorInterval="30">
     <Properties>
-        <Property name="LOG_PATTERN">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</Property>
-        <Property name="APP_LOG_ROOT">/mnt/c/Users/elangova/Downloads/converter</Property>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss.SSS} %5p [%t] %c{1} : %m%n%ex
+        </Property>
     </Properties>
+
     <Appenders>
-        <Console name="Console" target="SYSTEM_OUT" follow="true">
-            <PatternLayout pattern="${LOG_PATTERN}" />
-        </Console>
-        <RollingFile name="appLog"
-                fileName="${APP_LOG_ROOT}/SpringBoot2App/application.log"
-                filePattern="${APP_LOG_ROOT}/SpringBoot2App/application-%d{yyyy-MM-dd}-%i.log">
-            <PatternLayout pattern="${LOG_PATTERN}" />
+        <!-- Rolling File Appender -->
+        <RollingFile name="FileAppender" fileName="/mnt/c/Users/elangova/Downloads/converter/log/cproject.log"
+                     filePattern="/mnt/c/Users/elangova/Downloads/converter/log/cproject-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
             <Policies>
-                <SizeBasedTriggeringPolicy size="19500KB" />
+                <TimeBasedTriggeringPolicy interval="1" />
+                <!-- <SizeBasedTriggeringPolicy size="10MB" /> -->
             </Policies>
-            <DefaultRolloverStrategy max="1" />
+            <!-- <DefaultRolloverStrategy max="10"/> -->
         </RollingFile>
     </Appenders>
+
     <Loggers>
-        <Logger name="com.example.converter" additivity="false">
-            <AppenderRef ref="appLog" />
-            <AppenderRef ref="Console" />
+        <Logger name="com.example.converter" level="DEBUG">
+            <AppenderRef ref="FileAppender" />
         </Logger>
-        <Root level="debug">
-            <AppenderRef ref="Console" />
-            <AppenderRef ref="appLog" />
-        </Root>
+
+        <Logger name="com.example.converter.ConverterApplication" level="DEBUG"/>
+        
+        <Root level="DEBUG"/>
     </Loggers>
 </Configuration>
